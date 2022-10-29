@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float jumpSpeed=5f;
     [SerializeField] float climbSpeed = 5f;
     CapsuleCollider2D capsule;
+    BoxCollider2D myFeetCollider;
     float gravityScaleAtStart;
     void Start()
     {
@@ -18,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         capsule = GetComponent<CapsuleCollider2D>();
         gravityScaleAtStart = rigid.gravityScale=8;
+        myFeetCollider = GetComponent<BoxCollider2D>();
     }
 
 
@@ -73,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
     {
 
 
-        if (!capsule.IsTouchingLayers(LayerMask.GetMask("Climbing")))
+        if (!myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Climbing")))
         {
             rigid.gravityScale = gravityScaleAtStart;
             anim.SetBool("isWallJumping", false);
