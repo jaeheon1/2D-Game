@@ -75,7 +75,9 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.localScale = new Vector2(Mathf.Sign(rigid.velocity.x), 1f);
         }
+
     }
+
 
    void ClimbingLadder()
     {

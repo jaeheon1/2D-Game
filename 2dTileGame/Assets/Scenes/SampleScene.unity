@@ -42978,6 +42978,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.534791, y: 0.10643047}
   m_EdgeRadius: 0
+--- !u!114 &2010403583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010403570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6c89fe6a2bb10544b06de4fdd057ac2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 5
+  rigid: {fileID: 0}
+  jumpPower: 10
+  sprite: {fileID: 0}
+  capsule: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &2088621191
 GameObject:
   m_ObjectHideFlags: 0
@@ -43078,6 +43096,10 @@ PrefabInstance:
       propertyPath: jumpSpeed
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 2010403571, guid: 69dab842cceeccf43b20cc02783cb7d2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2010403578, guid: 69dab842cceeccf43b20cc02783cb7d2, type: 3}
       propertyPath: m_Size.x
       value: 0.7374564
@@ -43140,6 +43162,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3095402778378962416, guid: 69dab842cceeccf43b20cc02783cb7d2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5046448532689982102, guid: 69dab842cceeccf43b20cc02783cb7d2, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
