@@ -11,11 +11,17 @@ public class PlayerController : MonoBehaviour
     [SerializeField] SpriteRenderer sprite;
     [SerializeField] CapsuleCollider2D capsule;
     [SerializeField] Animator anim;
+
+    [SerializeField] int jumpCount = 2; // а║га х╫╪Ж
+    private bool IsJumping;
+    public bool isGrounded = false;
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        IsJumping = false;
+        jumpCount = 0;
     }
 
   
@@ -29,15 +35,37 @@ public class PlayerController : MonoBehaviour
 
     public void Jump()
     {
-        
-        if (Input.GetKeyDown(KeyCode.Space) && !anim.GetBool("isWallJumping"))
+
+        if (jumpCount > 0)
         {
-            rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
-            anim.SetBool("isJumping", true);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+
+
+                IsJumping = true;
+                rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+                jumpCount--;
+               
+            }
+            else
+            {
+                return;
+            }
+
         }
 
     }
-
+     
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+        if(collision.gameObject.CompareTag("Ground"))
+        {
+           
+            IsJumping = false;
+            jumpCount = 2;
+        }
+    }
     public void Move()
     {
 
