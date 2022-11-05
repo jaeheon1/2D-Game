@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638025350501158385
-    m_Hash: 3894236995
+      ticks: 638031461712596171
+    m_Hash: 3268165455
   m_LockFileStatus:
     m_FilePath: "F:/\uAE43\uD5C8\uBE0C/2D-Game/2dTileGame/Packages/packages-lock.json"
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638025350501369882
-    m_Hash: 1907958480
+      ticks: 638031471283905902
+    m_Hash: 3529807647
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -36,7 +36,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: cinematography
-  type: 
+  type: asset
   description: "Smart camera tools for passionate creators. \n\nNew starting from
     2.7.1: Are you looking for the Cinemachine menu? It has moved to the GameObject
     menu.\n\nIMPORTANT NOTE: If you are upgrading from the legacy Asset Store version
@@ -108,6 +108,7 @@ m_ResolvedPackages:
     - 2.9.0-pre.6
     - 2.9.1
     - 2.9.2
+    - 3.0.0-pre.3
     compatible:
     - 2.8.6
     - 2.8.9
@@ -158,7 +159,7 @@ m_ResolvedPackages:
     scopes: []
     isDefault: 1
     capabilities: 7
-  hideInEditor: 1
+  hideInEditor: 0
   isAssetStorePackage: 0
   datePublishedTicks: 637975495930000000
   documentationUrl: 
@@ -657,7 +658,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: asset
   description: A new input system which can be used as a more extensible and customizable
     alternative to Unity's classic input system in UnityEngine.Input.
   status: 4
@@ -699,10 +700,12 @@ m_ResolvedPackages:
     - 1.4.1
     - 1.4.2
     - 1.4.3
+    - 1.4.4
     compatible:
     - 1.4.2
     - 1.4.3
-    verified: 1.4.3
+    - 1.4.4
+    verified: 1.4.4
   dependencies:
   - name: com.unity.modules.uielements
     version: 1.0.0
@@ -733,7 +736,7 @@ m_ResolvedPackages:
     scopes: []
     isDefault: 1
     capabilities: 7
-  hideInEditor: 1
+  hideInEditor: 0
   isAssetStorePackage: 0
   datePublishedTicks: 638000569960000000
   documentationUrl: 
@@ -1014,12 +1017,12 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 3.0.6
     nextVersion: 
-- packageId: com.unity.timeline@1.6.4
+- packageId: com.unity.timeline@1.7.1
   testable: 0
   isDirectDependency: 1
-  version: 1.6.4
+  version: 1.7.1
   source: 1
-  resolvedPath: "F:\\\uAE43\uD5C8\uBE0C\\2D-Game\\2dTileGame\\Library\\PackageCache\\com.unity.timeline@1.6.4"
+  resolvedPath: "F:\\\uAE43\uD5C8\uBE0C\\2D-Game\\2dTileGame\\Library\\PackageCache\\com.unity.timeline@1.7.1"
   assetPath: Packages/com.unity.timeline
   name: com.unity.timeline
   displayName: Timeline
@@ -1149,13 +1152,13 @@ m_ResolvedPackages:
     capabilities: 7
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637789039180000000
+  datePublishedTicks: 637824211470000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.timeline.git
-    revision: d7e1eb6805737974459309b7d6e7db58635dd167
+    revision: 9cec37f449d04026a6c454de9e1bf6f34672764e
     path: 
   unityLifecycle:
     version: 1.6.4
@@ -3121,7 +3124,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 2D
-  type: 
+  type: asset
   description: 2D Animation provides all the necessary tooling and runtime components
     for skeletal animation using Sprites.
   status: 4
@@ -3225,9 +3228,12 @@ m_ResolvedPackages:
     - 8.0.2
     - 8.0.3
     - 8.0.4
+    - 8.0.5
     - 9.0.0-pre.1
     - 9.0.0-pre.3
     - 9.0.0
+    - 9.0.1
+    - 10.0.0-pre.1
     compatible:
     - 7.0.7
     - 7.0.8
@@ -3272,7 +3278,7 @@ m_ResolvedPackages:
     scopes: []
     isDefault: 1
     capabilities: 7
-  hideInEditor: 1
+  hideInEditor: 0
   isAssetStorePackage: 0
   datePublishedTicks: 637958913350000000
   documentationUrl: 
@@ -3377,7 +3383,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 2D
-  type: 
+  type: asset
   description: A ScriptedImporter for importing Adobe Photoshop PSB (Photoshop Big)
     file format. The ScriptedImporter is currently targeted for users who wants to
     create multi Sprite character animation using Unity 2D Animation Package.
@@ -3450,6 +3456,8 @@ m_ResolvedPackages:
     - 8.0.0-pre.1
     - 8.0.0-pre.3
     - 8.0.0
+    - 8.0.1
+    - 9.0.0-pre.1
     compatible:
     - 6.0.5
     - 6.0.6
@@ -3495,7 +3503,7 @@ m_ResolvedPackages:
     scopes: []
     isDefault: 1
     capabilities: 7
-  hideInEditor: 1
+  hideInEditor: 0
   isAssetStorePackage: 0
   datePublishedTicks: 637958913380000000
   documentationUrl: 
@@ -3573,7 +3581,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 2D
-  type: 
+  type: asset
   description: SpriteShape Runtime & Editor Package contains the tooling and the
     runtime component that allows you to create very organic looking spline based
     2D worlds. It comes with intuitive configurator and a highly performant renderer.
@@ -3655,6 +3663,8 @@ m_ResolvedPackages:
     - 8.0.1
     - 9.0.0-pre.1
     - 9.0.0
+    - 9.0.1
+    - 10.0.0-pre.1
     compatible:
     - 7.0.6
     verified: 7.0.6
@@ -3704,7 +3714,7 @@ m_ResolvedPackages:
     scopes: []
     isDefault: 1
     capabilities: 7
-  hideInEditor: 1
+  hideInEditor: 0
   isAssetStorePackage: 0
   datePublishedTicks: 637958913420000000
   documentationUrl: 
@@ -3781,7 +3791,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 2D
-  type: 
+  type: asset
   description: '2D Tilemap Extras is a package that contains extra scripts for use
     with 2D Tilemap features in Unity. These include custom Tiles and Brushes for
     the Tilemap feature.
@@ -3822,6 +3832,7 @@ m_ResolvedPackages:
     - 3.0.0
     - 3.0.1
     - 3.0.2
+    - 4.0.0-pre.1
     compatible:
     - 2.2.3
     verified: 2.2.3
@@ -3858,7 +3869,7 @@ m_ResolvedPackages:
     scopes: []
     isDefault: 1
     capabilities: 7
-  hideInEditor: 1
+  hideInEditor: 0
   isAssetStorePackage: 0
   datePublishedTicks: 637892785880000000
   documentationUrl: 
@@ -3885,7 +3896,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: asset
   description: 'This package defines common components used by multiple Game Service
     packages.
 
@@ -3911,10 +3922,12 @@ m_ResolvedPackages:
     - 1.4.2
     - 1.4.3
     - 1.5.2
+    - 1.6.0
     compatible:
     - 1.4.2
     - 1.4.3
     - 1.5.2
+    - 1.6.0
     verified: 1.4.3
   dependencies:
   - name: com.unity.modules.unitywebrequest
@@ -3938,7 +3951,7 @@ m_ResolvedPackages:
     scopes: []
     isDefault: 1
     capabilities: 7
-  hideInEditor: 1
+  hideInEditor: 0
   isAssetStorePackage: 0
   datePublishedTicks: 637919618520000000
   documentationUrl: 
@@ -4030,7 +4043,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 2D
-  type: 
+  type: asset
   description: 2D Common is a package that contains shared functionalities that are
     used by most of the other 2D packages.
   status: 4
@@ -4076,9 +4089,12 @@ m_ResolvedPackages:
     - 7.0.0
     - 7.0.1
     - 7.0.2
+    - 7.0.3
     - 8.0.0-pre.1
     - 8.0.0-pre.2
     - 8.0.0
+    - 8.0.1
+    - 9.0.0-pre.1
     compatible:
     - 6.0.4
     - 6.0.5
@@ -4118,7 +4134,7 @@ m_ResolvedPackages:
     scopes: []
     isDefault: 1
     capabilities: 7
-  hideInEditor: 1
+  hideInEditor: 0
   isAssetStorePackage: 0
   datePublishedTicks: 637958913310000000
   documentationUrl: 

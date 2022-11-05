@@ -13,23 +13,37 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Animator anim;
 
     [SerializeField] int jumpCount = 2; // а║га х╫╪Ж
-    private bool IsJumping;
-    public bool isGrounded = false;
+    
+    public float wallCheckDistance;
+    public float groundCheckDistance;
+    private bool isWallDetected;
+
+    private bool canWallSlide;
+    private bool isWallSliding;
+
+
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
-        IsJumping = false;
+       
         jumpCount = 0;
     }
 
   
     void Update()
     {
-        Jump();
 
         Move();
+        Jump();
+
+        WallCollisionChecks();
+
+        Jumpanim();
+
+
+
     }
 
 
@@ -42,10 +56,11 @@ public class PlayerController : MonoBehaviour
             {
 
 
-                IsJumping = true;
+                
                 rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
-                jumpCount--;
                
+                jumpCount--;
+             
             }
             else
             {
@@ -62,7 +77,7 @@ public class PlayerController : MonoBehaviour
         if(collision.gameObject.CompareTag("Ground"))
         {
            
-            IsJumping = false;
+           
             jumpCount = 2;
         }
     }
@@ -72,6 +87,15 @@ public class PlayerController : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
 
         rigid.velocity = new Vector2(Speed * x, rigid.velocity.y);
+
+        bool isRunning = rigid.velocity.x != 0;
+
+
+            anim.SetBool("isRunning", isRunning);
+           
+
+        
+
 
 
         if (x > 0)
@@ -84,5 +108,41 @@ public class PlayerController : MonoBehaviour
         }
 
 
+    }
+  
+     public void Jumpanim()
+    {
+        //Landing Platform
+
+       
+            Debug.DrawRay(rigid.position, Vector2.down, new Color(0, 1, 0));
+
+            RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector2.down, 1, LayerMask.GetMask("Ground"));
+
+            if (rayHit.collider != null)
+            {
+                if (rayHit.distance < 1f)
+                {
+                    Debug.Log(rayHit.collider.name);
+                    anim.SetBool("isJumping", false);
+                }
+            
+             }
+        
+      }
+    
+    public  void WallCollisionChecks()
+    {
+        Debug.DrawRay(rigid.position, Vector2.right, new Color(0, 1, 0));
+        RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector2.right, 1, LayerMask.GetMask("Ground"));
+        if (rayHit.collider != null)
+        {
+            if (rayHit.distance < 1f)
+            {
+                Debug.Log(rayHit.collider.name);
+               
+            }
+
+        }
     }
 }
