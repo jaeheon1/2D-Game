@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
 
         WallCollisionChecks();
 
-        Jumpanim();
+        
 
 
 
@@ -55,17 +55,21 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
 
-
-                
+              
+             
                 rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
-               
+                anim.SetBool("isJumping", true);
                 jumpCount--;
              
+                if(jumpCount==0)
+                {
+                    anim.SetBool("isJumping", false);
+
+                   
+                }
+              
             }
-            else
-            {
-                return;
-            }
+         
 
         }
 
@@ -124,8 +128,8 @@ public class PlayerController : MonoBehaviour
                 if (rayHit.distance < 1f)
                 {
                     Debug.Log(rayHit.collider.name);
-                    anim.SetBool("isJumping", false);
-                }
+                anim.SetBool("isJumping", false);
+            }
             
              }
         
