@@ -84,6 +84,11 @@ public class PlayerController : MonoBehaviour
            
             jumpCount = 2;
         }
+
+        if (collision.gameObject.CompareTag("Trap"))
+        {
+            OnDamaged(collision.transform.position);
+        }
     }
     public void Move()
     {
@@ -148,5 +153,25 @@ public class PlayerController : MonoBehaviour
             }
 
         }
+    }
+    void OnDamaged(Vector2 targetPos)
+    {
+        //change Layer
+        gameObject.layer = 13;
+
+        //맞았을때 색 바꾸기 
+        sprite.color = new Color(1, 1, 1, 0.4f);
+
+        //맞았을때 팅기는 방향
+        int dirc = transform.position.x - targetPos.x > 0 ? 1 : -1;
+        rigid.AddForce(new Vector2(dirc, 1)*7, ForceMode2D.Impulse);
+        Invoke("OffDamaged", 3);
+    }
+ 
+    void OffDamaged()
+    {
+        gameObject.layer = 8;
+        sprite.color = new Color(1, 1, 1,1);
+
     }
 }
