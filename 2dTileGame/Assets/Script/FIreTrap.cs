@@ -19,14 +19,14 @@ public class FIreTrap : Trap
     {
         anim.SetBool("isWorking",isWorking);
     }
-    protected override void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(isWorking)
-        {
-            base.OnTriggerEnter2D(collision);
-        }
+    //protected override void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if(isWorking)
+    //    {
+    //       base.OnTriggerEnter2D(collision);
+    //    }
       
-    }
+    //}
    
     }
 

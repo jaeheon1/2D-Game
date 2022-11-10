@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     private bool isWallSliding;
 
 
-    void Start()
+    void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
     }
 
   
-    void Update()
+    void FixedUpdate()
     {
 
         Move();
@@ -74,20 +74,24 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-     
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.CompareTag("trap"))
+    //    {
+    //        transform.position = other.transform.position + transform.position;
+    //    }
+    //}
     public void OnCollisionEnter2D(Collision2D collision)
     {
         
         if(collision.gameObject.CompareTag("Ground"))
         {
-           
-           
             jumpCount = 2;
         }
-
-        if (collision.gameObject.CompareTag("Trap"))
+        else if (collision.gameObject.CompareTag("Trap"))
         {
             OnDamaged(collision.transform.position);
+            //transform.position = collision.transform.position - transform.position;
         }
     }
     public void Move()
@@ -156,20 +160,22 @@ public class PlayerController : MonoBehaviour
     }
     void OnDamaged(Vector2 targetPos)
     {
+        rigid.velocity = new Vector2(rigid.velocity.x, 0);
         //change Layer
         gameObject.layer = 13;
 
         //맞았을때 색 바꾸기 
         sprite.color = new Color(1, 1, 1, 0.4f);
-
+        
         //맞았을때 팅기는 방향
         int dirc = transform.position.x - targetPos.x > 0 ? 1 : -1;
-        rigid.AddForce(new Vector2(dirc, 1)*7, ForceMode2D.Impulse);
+        rigid.AddForce(new Vector2(dirc,1) * 7, ForceMode2D.Impulse);
         Invoke("OffDamaged", 3);
     }
  
     void OffDamaged()
     {
+        //무적상태 3초
         gameObject.layer = 8;
         sprite.color = new Color(1, 1, 1,1);
 
